@@ -14,7 +14,7 @@ const allowedOrigins = ['*'];
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({origin:allowedOrigins,credentials: true}))
+app.use(cors())
 //API ENDPOINT
 app.get("/", (req, res) => res.send("API is Working Fine"));
 app.use('/api/auth', authRouter);
